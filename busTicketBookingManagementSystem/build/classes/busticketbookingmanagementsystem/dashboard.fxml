@@ -18,7 +18,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticketbookingmanagementsystem.dashboardController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busticketbookingmanagementsystem.dashboardController">
    <children>
       <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -58,7 +58,7 @@
                               <Font name="Tahoma" size="17.0" />
                            </font>
                         </Label>
-                        <Label fx:id="username" alignment="CENTER" layoutX="7.0" layoutY="140.0" prefHeight="23.0" prefWidth="192.0" text="MarcoMan" textFill="WHITE">
+                        <Label fx:id="username" alignment="CENTER" layoutX="7.0" layoutY="140.0" prefHeight="23.0" prefWidth="192.0" text="admin" textFill="WHITE">
                            <font>
                               <Font name="Arial Bold" size="20.0" />
                            </font>
@@ -86,7 +86,7 @@
                         </Button>
                         <Button fx:id="logout" layoutX="14.0" layoutY="493.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="40.0" styleClass="logout-btn" stylesheets="@dashboardDesign.css">
                            <graphic>
-                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" text="" />
                            </graphic>
                         </Button>
                      </children>

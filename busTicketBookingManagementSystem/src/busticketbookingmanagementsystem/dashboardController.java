@@ -270,6 +270,7 @@ public class dashboardController implements Initializable {
     private Statement statement;
 
 //    LETS WORK FOR AVAILABLE BUSES FORM FIRST : ) 
+    @FXML
     public void availableBusAdd() {
 
         String addData = "INSERT INTO bus (bus_id,location,status,price,date) VALUES(?,?,?,?,?)";
@@ -339,6 +340,7 @@ public class dashboardController implements Initializable {
 
     }
 
+    @FXML
     public void availableBusUpdate() {
 
         String updateData = "UPDATE bus SET location = '"
@@ -399,6 +401,7 @@ public class dashboardController implements Initializable {
         }
     }
     
+    @FXML
     public void availableBusDelete(){
         
         String deleteData = "DELETE FROM bus WHERE bus_id = '"
@@ -453,6 +456,7 @@ public class dashboardController implements Initializable {
         
     }
 
+    @FXML
     public void availableBusReset() {
 
         availableB_busID.setText("");
@@ -465,6 +469,7 @@ public class dashboardController implements Initializable {
 
     private String[] statusList = {"Available", "Not Available"};
 
+    @FXML
     public void comboBoxStatus() {
 
         List<String> listS = new ArrayList<>();
@@ -527,6 +532,7 @@ public class dashboardController implements Initializable {
 
     }
 
+    @FXML
     public void avaialbleBSelectBusData() {
 
         busData busD = availableB_tableView.getSelectionModel().getSelectedItem();
@@ -543,6 +549,7 @@ public class dashboardController implements Initializable {
 
     }
     
+    @FXML
     public void availableSearch(){
         
         FilteredList<busData> filter = new FilteredList<>(availableBBusListData, e-> true);
@@ -579,6 +586,7 @@ public class dashboardController implements Initializable {
         availableB_tableView.setItems(sortList);
     }
     
+    @FXML
     public void busIdList(){
         
         String busD = "SELECT * FROM bus WHERE status = 'Available'";
@@ -642,6 +650,7 @@ public class dashboardController implements Initializable {
         
     }
     
+    @FXML
     public void ticketNumList(){
         List<String> listTicket = new ArrayList<>();
         for(int q = 1; q <= 40; q++){
@@ -669,10 +678,11 @@ public class dashboardController implements Initializable {
         }catch(Exception e){e.printStackTrace();}
     }
     
-//    NOW LETS CREATE TABLE FOR customer
+
 
     private double priceData = 0;
     private double totalP = 0;
+    @FXML
     public void bookingTicketSelect(){
         
         String firstName = bookingTicket_firstName.getText();
@@ -745,6 +755,7 @@ public class dashboardController implements Initializable {
         }
     }
     
+    @FXML
     public void bookingTicketReset(){
         
         bookingTicket_firstName.setText("");
@@ -757,6 +768,7 @@ public class dashboardController implements Initializable {
     
     private String[] genderL = {"Male","Female","Others"};
     
+    @FXML
     public void genderList(){
         
         List<String> listG = new ArrayList<>();
@@ -771,6 +783,7 @@ public class dashboardController implements Initializable {
     }
     
     private int countRow;
+    @FXML
     public void bookingTicketPay(){
         
         String firstName = bookingTicket_sci_firstName.getText();
@@ -874,6 +887,7 @@ public class dashboardController implements Initializable {
         }catch(Exception e){e.printStackTrace();}
     }
     
+    @FXML
     public void bookingTicketReceipt(){
         
         HashMap hash = new HashMap();
@@ -958,6 +972,7 @@ public class dashboardController implements Initializable {
         
     }
     
+    @FXML
     public void customersSearch(){
         
         FilteredList<customerData> filter = new FilteredList<>(customersDataL, e-> true);
@@ -1007,6 +1022,7 @@ public class dashboardController implements Initializable {
     
     private double x = 0;
     private double y = 0;
+    @FXML
     public void logout() {
 
         try {
@@ -1065,6 +1081,7 @@ public class dashboardController implements Initializable {
         customers_btn.setStyle("-fx-background-color:transparent");
     }
 
+    @FXML
     public void switchForm(ActionEvent event) {
 
         if (event.getSource() == dashboard_Btn) {
@@ -1238,10 +1255,12 @@ public class dashboardController implements Initializable {
         username.setText(getData.username);
     }
 
+    @FXML
     public void close() {
         System.exit(0);
     }
 //NOW LETS PROCEED TO OUR CHART
+    @FXML
     public void minimize() {
         Stage stage = (Stage) main_form.getScene().getWindow();
         stage.setIconified(true);

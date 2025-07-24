@@ -58,6 +58,7 @@ public class FXMLDocumentController implements Initializable {
     private double x = 0;
     private double y = 0;
 
+    @FXML
     public void login() {
 
         String sql = "SELECT * FROM admin WHERE username = ? and password = ?";
@@ -133,6 +134,7 @@ public class FXMLDocumentController implements Initializable {
 
     }
 
+    @FXML
     public void close() {
         System.exit(0);
     }
