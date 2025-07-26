@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package busticketbookingmanagementsystem;
 
 import java.net.URL;
@@ -27,11 +23,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-/**
- *
- * @author MarcoMan 
- * PLEASE SUBSCRIBE OUR CHANNEL FOR SUPPORT AND HIT THE LIKE BUTTON THANKS : )
- */
+
 public class FXMLDocumentController implements Initializable {
 
     @FXML
@@ -49,8 +41,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button close;
 
-//    LETS CREATE A DATABASE FIRST 
-//    DATABASE TOOLS
+
     private Connection connect;
     private PreparedStatement prepare;
     private ResultSet result;
@@ -89,7 +80,7 @@ public class FXMLDocumentController implements Initializable {
 
                     getData.username = username.getText();
 
-                    // THEN WE WILL PROCEED TO DASHBOARD FORM : ) 
+                     
                     alert = new Alert(AlertType.INFORMATION);
                     alert.setTitle("Information Message");
                     alert.setHeaderText(null);
@@ -118,7 +109,7 @@ public class FXMLDocumentController implements Initializable {
                     stage.show();
 
                 } else {
-//                    IF INCORRECT THE DATA YOU GAVE 
+
                     alert = new Alert(AlertType.ERROR);
                     alert.setTitle("Error Message");
                     alert.setHeaderText(null);
@@ -141,7 +132,7 @@ public class FXMLDocumentController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }
 
 }

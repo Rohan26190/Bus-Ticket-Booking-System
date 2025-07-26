@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package busticketbookingmanagementsystem;
 
 import javafx.application.Application;
@@ -13,11 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-/**
- *
- * @author MarcoMan PLEASE SUBSCRIBE OUR CHANNEL FOR SUPPORT AND HIT THE LIKE
- * BUTTON THANKS : )
- */
+
 public class BusTicketBookingManagementSystem extends Application {
 
     private double x = 0;
@@ -51,9 +43,8 @@ public class BusTicketBookingManagementSystem extends Application {
         stage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
+    
+    
     public static void main(String[] args) {
         launch(args);
     }

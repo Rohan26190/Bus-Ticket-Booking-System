@@ -1,12 +1,4 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 09 6, 22, 8:21:32 PM
-    Author     : WINDOWS 10
-*/
+
 
 .top-form{
     -fx-background-color:#fff;
@@ -261,4 +253,3 @@ and open the template in the editor.
 .receipt-btn:hover{
     -fx-background-color:#bf7f3a;
 }
-/* LETS GIVE THEM NAMES EACH COMPONENTS*/

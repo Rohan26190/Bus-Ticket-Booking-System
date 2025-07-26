@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package busticketbookingmanagementsystem;
 
 import java.net.URL;
@@ -263,13 +259,13 @@ public class dashboardController implements Initializable {
     @FXML
     private TextField customers_search;
 
-//    DATABASE TOOLS
+
     private Connection connect;
     private PreparedStatement prepare;
     private ResultSet result;
     private Statement statement;
 
-//    LETS WORK FOR AVAILABLE BUSES FORM FIRST : ) 
+
     @FXML
     public void availableBusAdd() {
 
@@ -281,7 +277,7 @@ public class dashboardController implements Initializable {
 
             Alert alert;
 
-//             CHECK IF THE FIELDS ARE EMPTY
+
             if (availableB_busID.getText().isEmpty()
                     || availableB_location.getText().isEmpty()
                     || availableB_status.getSelectionModel().getSelectedItem() == null
@@ -296,7 +292,7 @@ public class dashboardController implements Initializable {
 
             } else {
 
-//                CHECK IF THE BUS ID IS ALREADY EXIST
+
                 String check = "SELECT bus_id FROM bus WHERE bus_id = '"
                         + availableB_busID.getText() + "'";
 
@@ -328,7 +324,7 @@ public class dashboardController implements Initializable {
                     alert.setContentText("Successfully Added!");
                     alert.showAndWait();
 
-//                    TO UPDATE YOUR TABLE VIEW ONCE THE DATA IS SUCCESSFUL
+
                     availableBShowBusData();
                     availableBusReset();
 
@@ -451,7 +447,7 @@ public class dashboardController implements Initializable {
                     return;
                 }
             }
-//            NOW LETS PROCEED TO BOOKING TICKET : ) 
+
         }catch(Exception e){e.printStackTrace();}
         
     }
@@ -814,7 +810,7 @@ public class dashboardController implements Initializable {
                 countRow = result.getInt("COUNT(id)");
             }
             
-//            CHECK IF EMPTY
+
             if(bookingTicket_sci_firstName.getText().isEmpty()
                     || bookingTicket_sci_lastNmae.getText().isEmpty()
                     || bookingTicket_sci_gender.getText().isEmpty()
@@ -871,7 +867,7 @@ public class dashboardController implements Initializable {
                 alert.setHeaderText(null);
                 alert.setContentText("Successful!");
                 alert.showAndWait();
-//                NOW LETS PROCEED TO RECEIPT
+
                 bookingTicket_sci_firstName.setText("");
                 bookingTicket_sci_lastNmae.setText("");
                 bookingTicket_sci_gender.setText("");
@@ -882,7 +878,7 @@ public class dashboardController implements Initializable {
                 bookingTicket_sci_type.setText("");
                 bookingTicket_sci_ticketNum.setText("");
                 bookingTicket_sci_total.setText("$0.0");
-//                WE NEED TO INSERT THE DATA ON CUSTOMER_RECEIPT FOR OUR RECEIPT : ) 
+
             }
         }catch(Exception e){e.printStackTrace();}
     }
@@ -913,7 +909,7 @@ public class dashboardController implements Initializable {
             }
         }catch(Exception e){e.printStackTrace();}
     }
-//    NOW LETS PROCEED TO CUSTOMER FORM : ) 
+
     
     public ObservableList<customerData> customersDataList(){
         
@@ -1229,14 +1225,7 @@ public class dashboardController implements Initializable {
         XYChart.Series chart = new XYChart.Series();
         
         try{
-//            THATS IT FOR THIS VIDEO, THANKS FOR WATCHING!!
-//            
-//            DONT FORGET TO SUBSCRIBE AND HIT THE NOTIF BELL TO BECOME UPDATED!
-//            DONT FORGET ALSO TO HIT THE LIKE BUTTON FOR SUPPORT : ) 
-//            
-//            THANKS GUYS!
-//            
-//            HAPPY LEARNINGS!
+
             
             prepare = connect.prepareStatement(sql);
             result = prepare.executeQuery();
@@ -1259,7 +1248,7 @@ public class dashboardController implements Initializable {
     public void close() {
         System.exit(0);
     }
-//NOW LETS PROCEED TO OUR CHART
+
     @FXML
     public void minimize() {
         Stage stage = (Stage) main_form.getScene().getWindow();
